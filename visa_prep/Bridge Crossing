@@ -1,0 +1,7 @@
+def max_mangoes(x,y,z):
+   return(z - y) // x
+def main():
+    x,y,z= map(int,input().split())
+    print(max_mangoes(x,y,z))
+if __name__ == "__main__":
+    main()
