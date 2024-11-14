@@ -1,0 +1,8 @@
+q,w,e= map (int ,input().split(" "))
+
+if e>=(q+w):
+    print("2")
+elif e>=q:
+    print("1")
+else:
+    print("0")
