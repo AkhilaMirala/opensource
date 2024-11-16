@@ -1,0 +1,12 @@
+def calculate_scores(T, test_cases):
+    result = []
+    for X, N in test_cases:
+        points_per_test_case= X// 10
+        score = points_per_test_case*N
+        result.append(score)
+    return result
+T = int(input().strip())
+test_cases=[tuple(map(int, input().split())) for _ in range(T)]
+scores = calculate_scores(T, test_cases)
+for score in scores:
+    print(score)
