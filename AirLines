@@ -1,0 +1,8 @@
+import math
+def minimum_planes_needed(X,N):
+    current_seat = X*100
+    additional_passengers = max(0, N - current_seat)
+    additional_planes = math.ceil(additional_passengers/100)
+    return additional_planes
+X,N=map(int, input().split())
+print(minimum_planes_needed(X,N))
