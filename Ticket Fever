@@ -1,0 +1,6 @@
+T = int(input().strip())
+results = []
+for _ in range(T):
+    N,M = map(int, input().split())
+    results.append(max(0, N - M))
+print("\n".join(map(str, results)))
