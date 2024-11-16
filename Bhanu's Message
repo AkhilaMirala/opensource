@@ -1,0 +1,16 @@
+import re
+def check_number_validity(number):
+    pattern_with_code = r'^\+\d{2} \d{10}$'
+    pattern_without_code=r'^\d{10}&'
+    if re.match(pattern_with_code, number):
+        digits=number.split()[1]
+    elif re.match(pattern_without_code, number):
+        digits = number
+    else:
+        return "Incorrect"
+    if sum(int(digit) for digit in digits) > 0:
+        return "Correct"
+    else:
+        return "Incorrect"
+number = input().strip()
+print(check_number_validity(number))
